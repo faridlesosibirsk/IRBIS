@@ -15,9 +15,11 @@ program Project1Tests;
 {$ENDIF}
 
 uses
+  TestLogUnit in 'TestLogUnit.pas',
+  Unit1 in '..\Unit1.pas',
   DUnitTestRunner;
 
-{$R *.RES}
+{R *.RES}
 
 begin
   DUnitTestRunner.RunRegisteredTests;
