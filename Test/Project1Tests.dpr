@@ -16,7 +16,12 @@ program Project1Tests;
 
 uses
   TestGeneralUnit in 'TestGeneralUnit.pas',
-  DUnitTestRunner;
+  DUnitTestRunner,
+  GeneralInterfaceUnit in '..\Model\GeneralInterfaceUnit.pas',
+  GeneralUnit in '..\Model\GeneralUnit.pas',
+  ModelControllerInterfaceUnit in '..\Model\ModelControllerInterfaceUnit.pas',
+  ModelControllerUnit in '..\Model\ModelControllerUnit.pas',
+  regexpr in '..\src\regexpr.pas';
 
 {R *.RES}
 

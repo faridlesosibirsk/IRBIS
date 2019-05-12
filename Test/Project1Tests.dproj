@@ -82,6 +82,11 @@
 				<MainSource>MainSource</MainSource>
 			</DelphiCompile>
 			<DCCReference Include="TestGeneralUnit.pas"/>
+			<DCCReference Include="..\Model\GeneralInterfaceUnit.pas"/>
+			<DCCReference Include="..\Model\GeneralUnit.pas"/>
+			<DCCReference Include="..\Model\ModelControllerInterfaceUnit.pas"/>
+			<DCCReference Include="..\Model\ModelControllerUnit.pas"/>
+			<DCCReference Include="..\src\regexpr.pas"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>

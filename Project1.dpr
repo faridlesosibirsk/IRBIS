@@ -9,13 +9,16 @@ uses
   InvironmentInterfaceUnit in 'View\InvironmentInterfaceUnit.pas',
   PanelsUnit in 'View\PanelsUnit.pas',
   ViewControllerInterfaceUnit in 'View\ViewControllerInterfaceUnit.pas',
-  ViewControllerUnit in 'View\ViewControllerUnit.pas';
+  ViewControllerUnit in 'View\ViewControllerUnit.pas',
+  GeneralInterfaceUnit in 'Model\GeneralInterfaceUnit.pas',
+  GeneralUnit in 'Model\GeneralUnit.pas',
+  regexpr in 'src\regexpr.pas';
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  AApplication.CreateForm(TForm1, Form1);
-  pplication.Run;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
 end.

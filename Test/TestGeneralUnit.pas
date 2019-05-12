@@ -12,22 +12,25 @@ unit TestGeneralUnit;
 interface
 
 uses
+  GeneralUnit {General} ,
+  GeneralInterfaceUnit {GeneralInterface} ,
   TestFramework, System.SysUtils, Vcl.Graphics, Winapi.Windows, System.Variants,
   System.Classes, Vcl.Dialogs, Vcl.Controls, Vcl.Forms, Winapi.Messages;
 
 type
   TestGeneral = class(TTestCase)
   const
-    LogPath = '/var/log/apache/access.log';
-    StartDate = '10/May/2019';
-    EndDate = '12/May/2019';
+    LogPath = 'access.log1';
+    StartDate = 43460; // 0 12/30/1899 12:00 am
+    EndDate = 43462; // 2.75 1/1/1900 6:00 pm
   strict private
     FGeneral: General;
   public
     procedure SetUp; override;
     procedure TearDown; override;
   published
-    procedure TestGetLogPath;
+    // procedure TestGetLogPath;
+    procedure TestRead;
   end;
 
 implementation
@@ -43,11 +46,18 @@ begin
   FGeneral := nil;
 end;
 
-procedure TestGeneral.TestGetLogPath;
+procedure TestGeneral.TestRead;
 begin
-  CheckEqualsString(FGeneral.GetLogPath, LogPath);
+  FGeneral.Read;
+  CheckNotNull(FGeneral);
 end;
 
+{
+  procedure TestGeneral.TestGetLogPath;
+  begin
+  CheckEqualsString(FGeneral.GetLogPath, LogPath);
+  end;
+}
 initialization
 
 // Register any test cases with the test runner
