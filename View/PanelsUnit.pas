@@ -37,6 +37,7 @@ end;
 procedure Panels.Destroy;
 begin
   Panel.Parent:=NIL;
+  Panel.Free;
   Panel := NIL;
 end;
 

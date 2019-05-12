@@ -43,7 +43,7 @@ end;
 procedure Buttons.Destroy;
 begin
   Button.Parent := NIL;
-  //Button.Free;
+  Button.Free;
   Button := NIL;
 end;
 
