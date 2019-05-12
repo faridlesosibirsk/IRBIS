@@ -3,11 +3,14 @@ unit ModelControllerUnit;
 interface
 
 uses
-  ModelControllerInterfaceUnit;
+  GeneralInterfaceUnit {GeneralInterface} ,
+  ModelControllerInterfaceUnit {ModelControllerInterface};
 
 type
   ModelController = class(TInterfacedObject, ModelControllerInterface)
-
+  private
+    /// <link>aggregation</link>
+    GeneralInterface1: GeneralInterface;
   end;
 
 implementation

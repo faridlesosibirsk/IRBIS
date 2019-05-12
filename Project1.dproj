@@ -96,6 +96,7 @@
 			<DCCReference Include="Model\GeneralInterfaceUnit.pas"/>
 			<DCCReference Include="Model\GeneralUnit.pas"/>
 			<DCCReference Include="src\regexpr.pas"/>
+			<DCCReference Include="Model\TotalRequestsUnit.pas"/>
 			<None Include="ModelSupport_Project1\default.txaPackage"/>
 			<None Include="ModelSupport_Project1\default.txvpck"/>
 			<None Include="ModelSupport_Project1\Unit1\default.txvpck"/>
@@ -117,6 +118,10 @@
 			<None Include="ModelSupport_Project1\GeneralInterfaceUnit\default.txaPackage"/>
 			<None Include="ModelSupport_Project1\GeneralUnit\default.txaPackage"/>
 			<None Include="ModelSupport_Project1\GeneralUnit\default.txvpck"/>
+			<None Include="ModelSupport_Project1\GeneralInterfaceUnit\default.txvpck"/>
+			<None Include="ModelSupport_Project1\RegExpr\default.txaPackage"/>
+			<None Include="ModelSupport_Project1\TotalRequestsUnit\default.txaPackage"/>
+			<None Include="ModelSupport_Project1\TotalRequestsUnit\default.txvpck"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>

@@ -87,6 +87,7 @@
 			<DCCReference Include="..\Model\ModelControllerInterfaceUnit.pas"/>
 			<DCCReference Include="..\Model\ModelControllerUnit.pas"/>
 			<DCCReference Include="..\src\regexpr.pas"/>
+			<None Include="ModelSupport_Project1Tests\default.txaPackage"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
@@ -147,6 +148,7 @@
 					<SourceProjectName>D:\_GIT\IRBIS\Project1.dproj</SourceProjectName>
 					<TestProjectName/>
 				</UnitTesting>
+				<ModelSupport>True</ModelSupport>
 			</BorlandProject>
 			<ProjectFileVersion>12</ProjectFileVersion>
 		</ProjectExtensions>

@@ -20,7 +20,7 @@ uses
 type
   TestGeneral = class(TTestCase)
   const
-    LogPath = 'access.log1';
+    LogPath = 'C:\_GIT\IRBIS\Test\Win32\Debug\access.log';
     StartDate = 43460; // 0 12/30/1899 12:00 am
     EndDate = 43462; // 2.75 1/1/1900 6:00 pm
   strict private
@@ -47,6 +47,8 @@ begin
 end;
 
 procedure TestGeneral.TestRead;
+var
+i: integer;
 begin
   FGeneral.Read;
   CheckNotNull(FGeneral);

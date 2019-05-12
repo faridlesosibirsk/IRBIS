@@ -12,7 +12,8 @@ uses
   ViewControllerUnit in 'View\ViewControllerUnit.pas',
   GeneralInterfaceUnit in 'Model\GeneralInterfaceUnit.pas',
   GeneralUnit in 'Model\GeneralUnit.pas',
-  regexpr in 'src\regexpr.pas';
+  regexpr in 'src\regexpr.pas',
+  TotalRequestsUnit in 'Model\TotalRequestsUnit.pas';
 
 {$R *.res}
 

@@ -59,8 +59,6 @@ implementation
 { General }
 
 constructor General.Create(LogPath: string; StartDate, EndDate: TDateTime);
-var
-  text: string;
 begin
   Self.LogPath := LogPath;
   Self.StartDate := StartDate;
@@ -69,13 +67,16 @@ begin
 end;
 
 procedure General.Read;
+var
+  text: string;
 begin
   AssignFile(Log, LogPath);
-  //while not Eof(Log) do
-  //begin
-    //ReadLn(Log, text);
-  //end;
-  //CloseFile(Log);
+  Reset(Log);
+  while not Eof(Log) do
+  begin
+     ReadLn(Log, text);
+  end;
+  CloseFile(Log);
 end;
 
 end.
