@@ -15,9 +15,13 @@ program Project1Tests;
 {$ENDIF}
 
 uses
-  TestLogUnit in 'TestLogUnit.pas',
-  Unit1 in '..\Unit1.pas',
-  DUnitTestRunner;
+  TestGeneralUnit in 'TestGeneralUnit.pas',
+  DUnitTestRunner,
+  GeneralInterfaceUnit in '..\Model\GeneralInterfaceUnit.pas',
+  GeneralUnit in '..\Model\GeneralUnit.pas',
+  ModelControllerInterfaceUnit in '..\Model\ModelControllerInterfaceUnit.pas',
+  ModelControllerUnit in '..\Model\ModelControllerUnit.pas',
+  regexpr in '..\src\regexpr.pas';
 
 {R *.RES}
 

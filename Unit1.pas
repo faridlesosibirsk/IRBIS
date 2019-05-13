@@ -1,15 +1,18 @@
 unit Unit1;
-
+
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  ViewControllerUnit {ViewController} ,
+  ViewControllerInterfaceUnit {ViewControllerInterface} ,
+  Vcl.Forms {TForm};
 
 type
   TForm1 = class(TForm)
+    procedure FormCreate(Sender: TObject);
   private
-    { Private declarations }
+    /// <link>aggregation</link>
+    ViewController1: ViewControllerInterface;
   public
     { Public declarations }
   end;
@@ -21,4 +24,10 @@ implementation
 
 {$R *.dfm}
 
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  ViewController1 := ViewController.Create(Self);
+end;
+
 end.
+

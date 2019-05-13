@@ -2,7 +2,7 @@
 		<PropertyGroup>
 			<ProjectGuid>{B1063F86-6722-4255-AB0B-32D3841110FA}</ProjectGuid>
 			<ProjectVersion>13.4</ProjectVersion>
-			<FrameworkType>None</FrameworkType>
+			<FrameworkType>VCL</FrameworkType>
 			<Base>True</Base>
 			<Config Condition="'$(Config)'==''">Debug</Config>
 			<Platform Condition="'$(Platform)'==''">Win32</Platform>
@@ -81,8 +81,13 @@
 			<DelphiCompile Include="$(MainSource)">
 				<MainSource>MainSource</MainSource>
 			</DelphiCompile>
-			<DCCReference Include="TestLogUnit.pas"/>
-			<DCCReference Include="..\Unit1.pas"/>
+			<DCCReference Include="TestGeneralUnit.pas"/>
+			<DCCReference Include="..\Model\GeneralInterfaceUnit.pas"/>
+			<DCCReference Include="..\Model\GeneralUnit.pas"/>
+			<DCCReference Include="..\Model\ModelControllerInterfaceUnit.pas"/>
+			<DCCReference Include="..\Model\ModelControllerUnit.pas"/>
+			<DCCReference Include="..\src\regexpr.pas"/>
+			<None Include="ModelSupport_Project1Tests\default.txaPackage"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
@@ -141,7 +146,9 @@
 					<TestFramework>DUnit / Delphi Win32</TestFramework>
 					<TestRunner>GUI</TestRunner>
 					<SourceProjectName>D:\_GIT\IRBIS\Project1.dproj</SourceProjectName>
+					<TestProjectName/>
 				</UnitTesting>
+				<ModelSupport>True</ModelSupport>
 			</BorlandProject>
 			<ProjectFileVersion>12</ProjectFileVersion>
 		</ProjectExtensions>

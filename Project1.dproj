@@ -86,6 +86,42 @@
 				<Form>Form1</Form>
 				<FormType>dfm</FormType>
 			</DCCReference>
+			<DCCReference Include="Model\ModelControllerInterfaceUnit.pas"/>
+			<DCCReference Include="Model\ModelControllerUnit.pas"/>
+			<DCCReference Include="View\ButtonsUnit.pas"/>
+			<DCCReference Include="View\InvironmentInterfaceUnit.pas"/>
+			<DCCReference Include="View\PanelsUnit.pas"/>
+			<DCCReference Include="View\ViewControllerInterfaceUnit.pas"/>
+			<DCCReference Include="View\ViewControllerUnit.pas"/>
+			<DCCReference Include="Model\GeneralInterfaceUnit.pas"/>
+			<DCCReference Include="Model\GeneralUnit.pas"/>
+			<DCCReference Include="src\regexpr.pas"/>
+			<DCCReference Include="Model\TotalRequestsUnit.pas"/>
+			<None Include="ModelSupport_Project1\default.txaPackage"/>
+			<None Include="ModelSupport_Project1\default.txvpck"/>
+			<None Include="ModelSupport_Project1\Unit1\default.txvpck"/>
+			<None Include="ModelSupport_Project1\Project1\default.txvpck"/>
+			<None Include="ModelSupport_Project1\Unit1\default.txaPackage"/>
+			<None Include="ModelSupport_Project1\ButtonsUnit\default.txvpck"/>
+			<None Include="ModelSupport_Project1\ButtonsUnit\default.txaPackage"/>
+			<None Include="ModelSupport_Project1\InvironmentInterfaceUnit\default.txvpck"/>
+			<None Include="ModelSupport_Project1\InvironmentInterfaceUnit\default.txaPackage"/>
+			<None Include="ModelSupport_Project1\PanelsUnit\default.txvpck"/>
+			<None Include="ModelSupport_Project1\PanelsUnit\default.txaPackage"/>
+			<None Include="ModelSupport_Project1\ViewControllerInterfaceUnit\default.txvpck"/>
+			<None Include="ModelSupport_Project1\ViewControllerInterfaceUnit\default.txaPackage"/>
+			<None Include="ModelSupport_Project1\ViewControllerUnit\default.txvpck"/>
+			<None Include="ModelSupport_Project1\ViewControllerUnit\default.txaPackage"/>
+			<None Include="ModelSupport_Project1\ModelControllerInterfaceUnit\default.txvpck"/>
+			<None Include="ModelSupport_Project1\ModelControllerUnit\default.txvpck"/>
+			<None Include="Data\for-example-model-goaccess-1557653301583-json"/>
+			<None Include="ModelSupport_Project1\GeneralInterfaceUnit\default.txaPackage"/>
+			<None Include="ModelSupport_Project1\GeneralUnit\default.txaPackage"/>
+			<None Include="ModelSupport_Project1\GeneralUnit\default.txvpck"/>
+			<None Include="ModelSupport_Project1\GeneralInterfaceUnit\default.txvpck"/>
+			<None Include="ModelSupport_Project1\RegExpr\default.txaPackage"/>
+			<None Include="ModelSupport_Project1\TotalRequestsUnit\default.txaPackage"/>
+			<None Include="ModelSupport_Project1\TotalRequestsUnit\default.txvpck"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
@@ -142,6 +178,7 @@
 				<UnitTesting>
 					<TestProjectName>D:\_GIT\IRBIS\Test\Project1Tests.dproj</TestProjectName>
 				</UnitTesting>
+				<ModelSupport>True</ModelSupport>
 			</BorlandProject>
 			<ProjectFileVersion>12</ProjectFileVersion>
 		</ProjectExtensions>
