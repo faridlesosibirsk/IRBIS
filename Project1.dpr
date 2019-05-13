@@ -14,13 +14,24 @@ uses
   GeneralUnit in 'Model\GeneralUnit.pas',
   regexpr in 'src\regexpr.pas',
   TotalRequestsUnit in 'Model\TotalRequestsUnit.pas',
-  ReadInterfaceUnit in 'Model\ReadInterfaceUnit.pas';
+  ReadInterfaceUnit in 'Model\ReadInterfaceUnit.pas',
+  ValidRequestsUnit in 'Model\ValidRequestsUnit.pas',
+  FailedRequestUnit in 'Model\FailedRequestUnit.pas',
+  GenerationTimeUnit in 'Model\GenerationTimeUnit.pas',
+  UniqueVisitorsUnit in 'Model\UniqueVisitorsUnit.pas',
+  UniqueFilesUnit in 'Model\UniqueFilesUnit.pas',
+  ExcludedHitsUnit in 'Model\ExcludedHitsUnit.pas',
+  UniqueRefferersUnit in 'Model\UniqueRefferersUnit.pas',
+  UniqueNotFoundUnit in 'Model\UniqueNotFoundUnit.pas',
+  UniqueStaticFilesUnit in 'Model\UniqueStaticFilesUnit.pas',
+  LogSizeUnit in 'Model\LogSizeUnit.pas',
+  BandWidthUnit in 'Model\BandWidthUnit.pas';
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  AApplication.CreateForm(TForm1, Form1);
-  pplication.Run;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
 end.

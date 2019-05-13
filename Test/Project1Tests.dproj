@@ -82,11 +82,15 @@
 				<MainSource>MainSource</MainSource>
 			</DelphiCompile>
 			<DCCReference Include="TestGeneralUnit.pas"/>
+			<DCCReference Include="..\src\regexpr.pas"/>
+			<DCCReference Include="..\Model\FailedRequestUnit.pas"/>
 			<DCCReference Include="..\Model\GeneralInterfaceUnit.pas"/>
 			<DCCReference Include="..\Model\GeneralUnit.pas"/>
 			<DCCReference Include="..\Model\ModelControllerInterfaceUnit.pas"/>
 			<DCCReference Include="..\Model\ModelControllerUnit.pas"/>
-			<DCCReference Include="..\src\regexpr.pas"/>
+			<DCCReference Include="..\Model\ReadInterfaceUnit.pas"/>
+			<DCCReference Include="..\Model\TotalRequestsUnit.pas"/>
+			<DCCReference Include="..\Model\ValidRequestsUnit.pas"/>
 			<None Include="ModelSupport_Project1Tests\default.txaPackage"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>

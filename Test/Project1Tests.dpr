@@ -17,11 +17,15 @@ program Project1Tests;
 uses
   TestGeneralUnit in 'TestGeneralUnit.pas',
   DUnitTestRunner,
+  regexpr in '..\src\regexpr.pas',
+  FailedRequestUnit in '..\Model\FailedRequestUnit.pas',
   GeneralInterfaceUnit in '..\Model\GeneralInterfaceUnit.pas',
   GeneralUnit in '..\Model\GeneralUnit.pas',
   ModelControllerInterfaceUnit in '..\Model\ModelControllerInterfaceUnit.pas',
   ModelControllerUnit in '..\Model\ModelControllerUnit.pas',
-  regexpr in '..\src\regexpr.pas';
+  ReadInterfaceUnit in '..\Model\ReadInterfaceUnit.pas',
+  TotalRequestsUnit in '..\Model\TotalRequestsUnit.pas',
+  ValidRequestsUnit in '..\Model\ValidRequestsUnit.pas';
 
 {R *.RES}
 

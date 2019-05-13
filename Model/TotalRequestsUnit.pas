@@ -7,26 +7,38 @@ uses
 
 type
   TotalRequests = class(TInterfacedObject, ReadInterface)
+  const
+    name = 'TotalRequest';
   private
   public
+    procedure Read(OneLogString: String);
     function return: integer;
-    procedure Read;
-    constructor create(LogPath: string; StartDate, EndDate: TDateTime);
+    function GetName: string;
+    constructor create;
   end;
 
 implementation
 
 { TotalRequests }
 
-constructor TotalRequests.create(LogPath: string;
-  StartDate, EndDate: TDateTime);
+constructor TotalRequests.create;
 begin
 
 end;
 
-procedure TotalRequests.Read;
+function TotalRequests.GetName: string;
+begin
+  Result := name;
+end;
+
+procedure TotalRequests.Read(OneLogString: String);
 begin
 
+end;
+
+function TotalRequests.return: integer;
+begin
+  Result := 0;
 end;
 
 end.

@@ -9,7 +9,6 @@ type
   GeneralInterface = interface
     procedure Read;
     function getOverallAnalyzedRequests: TDictionary<string, integer>;
-    function getTotalRequests: integer;
   end;
 
 implementation
