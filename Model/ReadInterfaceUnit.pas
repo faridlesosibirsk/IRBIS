@@ -4,8 +4,9 @@ interface
 
 type
   ReadInterface = interface
-    procedure read;
+    procedure read(OneLogString: String);
     function return: integer;
+    function GetName: string;
   end;
 
 implementation

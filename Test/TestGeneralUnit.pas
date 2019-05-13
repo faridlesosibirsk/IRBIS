@@ -12,6 +12,9 @@ unit TestGeneralUnit;
 interface
 
 uses
+  System.Generics.Collections {TDictionary} ,
+  ReadInterfaceUnit,
+  ValidRequestsUnit,
   GeneralUnit {General} ,
   GeneralInterfaceUnit {GeneralInterface} ,
   TestFramework, System.SysUtils, Vcl.Graphics, Winapi.Windows, System.Variants,
@@ -20,7 +23,7 @@ uses
 type
   TestGeneral = class(TTestCase)
   const
-    LogPath = 'C:\_GIT\IRBIS\Test\Win32\Debug\access.log';
+    LogPath = 'access.log';
     StartDate = 43460; // 0 12/30/1899 12:00 am
     EndDate = 43462; // 2.75 1/1/1900 6:00 pm
   strict private
@@ -36,8 +39,12 @@ type
 implementation
 
 procedure TestGeneral.SetUp;
+var
+  reader: TList<readinterface>;
 begin
-  FGeneral := General.Create(LogPath, StartDate, EndDate);
+  reader := TList<readinterface>.create;
+  reader.Add(ValidRequest.create);
+  FGeneral := General.create(LogPath, StartDate, EndDate, reader);
 end;
 
 procedure TestGeneral.TearDown;
@@ -48,7 +55,7 @@ end;
 
 procedure TestGeneral.TestRead;
 var
-i: integer;
+  i: integer;
 begin
   FGeneral.Read;
   CheckNotNull(FGeneral);
