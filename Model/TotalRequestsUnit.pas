@@ -3,15 +3,13 @@ unit TotalRequestsUnit;
 interface
 
 uses
-  GeneralUnit {General},
-  GeneralInterfaceUnit {GeneralInterface};
+  ReadInterfaceUnit;
 
 type
-  TotalRequests = class(TInterfacedObject, GeneralInterface)
+  TotalRequests = class(TInterfacedObject, ReadInterface)
   private
-    /// <link>aggregation</link>
-    realGeneral: General;
   public
+    function return: integer;
     procedure Read;
     constructor create(LogPath: string; StartDate, EndDate: TDateTime);
   end;
@@ -20,14 +18,15 @@ implementation
 
 { TotalRequests }
 
-constructor TotalRequests.create(LogPath: string; StartDate, EndDate: TDateTime);
+constructor TotalRequests.create(LogPath: string;
+  StartDate, EndDate: TDateTime);
 begin
-  realGeneral:= General.Create(LogPath, StartDate, EndDate);
+
 end;
 
 procedure TotalRequests.Read;
 begin
-  realGeneral.Read;
+
 end;
 
 end.
