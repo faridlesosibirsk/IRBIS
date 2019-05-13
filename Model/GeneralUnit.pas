@@ -3,6 +3,8 @@ unit GeneralUnit;
 interface
 
 uses
+  System.Generics.Collections {TDictionary} ,
+  ReadInterfaceUnit {ReadInterface} ,
   RegExpr {TRegExpr} ,
   SysUtils {Date} ,
   GeneralInterfaceUnit {GeneralInterface};
@@ -10,6 +12,7 @@ uses
 type
   General = class(TInterfacedObject, GeneralInterface)
   private
+    OverallAnalyzedRequests: TDictionary<string, integer>;
     RegExp: TRegExpr;
     Log: TextFile;
 
@@ -32,6 +35,8 @@ type
     }
     LogPath: string;
   public
+    function getTotalRequests: integer;
+    function getOverallAnalyzedRequests: TDictionary<string, integer>;
     procedure Read;
     {
       function GetStartDate: TDateTime;
@@ -51,7 +56,8 @@ type
       function GetBandwidth: integer;
       function GetLogPath: string;
     }
-    constructor Create(LogPath: string; StartDate, EndDate: TDateTime);
+    constructor Create(LogPath: string; StartDate, EndDate: TDateTime;
+      reader: TDictionary<string, ReadInterface>);
   end;
 
 implementation
@@ -74,7 +80,7 @@ begin
   Reset(Log);
   while not Eof(Log) do
   begin
-     ReadLn(Log, text);
+    ReadLn(Log, text);
   end;
   CloseFile(Log);
 end;
