@@ -5,27 +5,22 @@ interface
 uses
   System.Generics.Collections {TDictionary} ,
   ReadInterfaceUnit {ReadInterface} ,
-  RegExpr {TRegExpr} ,
+  //RegExpr {TRegExpr} ,
   SysUtils {Date} ,
   GeneralInterfaceUnit {GeneralInterface};
 
 type
   General = class(TInterfacedObject, GeneralInterface)
   private
-    OverallAnalyzedRequests: TDictionary<string, integer>;
-    RegExp: TRegExpr;
-    Log: TextFile;
+    //RegExp: TRegExpr;
+   //
     reader: TList<ReadInterface>;
-    return: TList<ReadInterface>;
     StartDate: TDateTime;
     EndDate: TDateTime;
-
     LogPath: string;
-
   public
-    function getOverallAnalyzedRequests: TList<ReadInterface>;
+    function getAnalyzedRequests: TList<ReadInterface>;
     procedure Read;
-
     constructor Create(LogPath: string; StartDate, EndDate: TDateTime;
       reader: TList<ReadInterface>);
   end;
@@ -42,14 +37,12 @@ begin
   Self.EndDate := EndDate;
   Self.reader := TList<ReadInterface>.Create;
   Self.reader := reader;
-  Self.return := TList<ReadInterface>.Create;
-  Self.return := reader;
 end;
 
-function General.getOverallAnalyzedRequests: TList<ReadInterface>;
+function General.getAnalyzedRequests: TList<ReadInterface>;
 begin
   result := TList<ReadInterface>.Create;
-  result := return;
+  result := reader;
 end;
 
 procedure General.Read;
@@ -57,6 +50,7 @@ var
   text: string;
   key: string;
   value: ReadInterface;
+  Log: TextFile;
 begin
   AssignFile(Log, LogPath);
   Reset(Log);

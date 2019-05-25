@@ -16,7 +16,7 @@ type
     /// <link>aggregation</link>
     GeneralInterface1: GeneralInterface;
   public
-    function getOverallAnalyzedRequests:  TList<ReadInterface>;
+    function getGeneralAnalyzedRequests:  TList<ReadInterface>;
     constructor create;
   end;
 
@@ -30,14 +30,15 @@ var
 begin
   ReadList:= TList<ReadInterface>.create;
   ReadList.Add(TotalRequests.create);
-  GeneralInterface1 := General.Create('irbislog_copy_01.02.2013.log', 0, 1, ReadList);
+  //GeneralInterface1 := General.Create('irbislog_copy_01.02.2013.log', 0, 1, ReadList);
+  GeneralInterface1 := General.Create('access12.log', 0, 1, ReadList);
   GeneralInterface1.Read;
 end;
 
-function ModelController.getOverallAnalyzedRequests: TList<ReadInterface>;
+function ModelController.getGeneralAnalyzedRequests: TList<ReadInterface>;
 begin
   Result := TList<ReadInterface>.create;
-  Result := GeneralInterface1.getOverallAnalyzedRequests;
+  Result := GeneralInterface1.getAnalyzedRequests;
 end;
 
 end.

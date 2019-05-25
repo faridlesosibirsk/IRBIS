@@ -42,21 +42,15 @@
         <property name="bounds_setted_by_user" value="True" />
       </reference>
     </reference>
-    <reference referencedUin="delphi:e_class:src:Project1:InvironmentInterfaceUnit.InvironmentInterface">
-      <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="-200,280,277,81" />
-      <property name="location_set_by_user" value="True" />
-      <reference referencedUin="delphi:e_method:src:Project1:InvironmentInterfaceUnit.InvironmentInterface.Destroy()" />
-    </reference>
     <reference referencedUin="delphi:e_class:src:Project1:ModelControllerInterfaceUnit.ModelControllerInterface">
       <property name="$shortcutReference" value="true" />
       <property name="bounds" value="580,280,324,81" />
       <property name="location_set_by_user" value="True" />
-      <reference referencedUin="delphi:e_method:src:Project1:ModelControllerInterfaceUnit.ModelControllerInterface.getOverallAnalyzedRequests()" />
+      <reference referencedUin="delphi:e_method:src:Project1:ModelControllerInterfaceUnit.ModelControllerInterface.getGeneralAnalyzedRequests()" />
     </reference>
     <reference referencedUin="delphi:e_class:src:Project1:ModelControllerUnit.ModelController">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="580,400,308,130" />
+      <property name="bounds" value="580,400,313,130" />
       <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:l_impl:src:Project1:ModelControllerUnit.ModelController:ModelControllerInterfaceUnit.ModelControllerInterface">
         <property name="sourceAnchor" value="734,400" />
@@ -65,12 +59,12 @@
       </reference>
       <reference referencedUin="delphi:e_field:src:Project1:ModelControllerUnit.ModelController.GeneralInterface1" />
       <reference referencedUin="delphi:l_ast:src:Project1:ModelControllerUnit.ModelController.GeneralInterface1">
-        <property name="sourceAnchor" value="580,440" />
-        <property name="targetAnchor" value="488,440" />
+        <property name="sourceAnchor" value="580,448" />
+        <property name="targetAnchor" value="449,448" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:e_method:src:Project1:ModelControllerUnit.ModelController.create()" />
-      <reference referencedUin="delphi:e_method:src:Project1:ModelControllerUnit.ModelController.getOverallAnalyzedRequests()" />
+      <reference referencedUin="delphi:e_method:src:Project1:ModelControllerUnit.ModelController.getGeneralAnalyzedRequests()" />
     </reference>
     <reference referencedUin="delphi:e_class:src:Project1:PanelsUnit.Panels">
       <property name="$shortcutReference" value="true" />
@@ -103,7 +97,6 @@
       <property name="$shortcutReference" value="true" />
       <property name="bounds" value="240,140,246,175" />
       <property name="location_set_by_user" value="True" />
-      <reference referencedUin="delphi:e_field:src:Project1:ViewControllerUnit.ViewController.Invironment" />
       <reference referencedUin="delphi:e_field:src:Project1:ViewControllerUnit.ViewController.AOwner" />
       <reference referencedUin="delphi:e_field:src:Project1:ViewControllerUnit.ViewController.ModuleController" />
       <reference referencedUin="delphi:e_method:src:Project1:ViewControllerUnit.ViewController.DestroyInvironment()" />
@@ -114,51 +107,49 @@
         <property name="targetAnchor" value="363,81" />
         <property name="bendpoints" value="" />
       </reference>
-      <reference referencedUin="delphi:l_ast:src:Project1:ViewControllerUnit.ViewController.Invironment">
-        <property name="sourceAnchor" value="240,297" />
-        <property name="targetAnchor" value="77,297" />
-        <property name="bendpoints" value="" />
-      </reference>
       <reference referencedUin="delphi:l_ast:src:Project1:ViewControllerUnit.ViewController.ModuleController">
         <property name="sourceAnchor" value="486,297" />
         <property name="targetAnchor" value="580,297" />
         <property name="bendpoints" value="" />
       </reference>
+      <reference referencedUin="delphi:e_field:src:Project1:ViewControllerUnit.ViewController.Windows1" />
+      <reference referencedUin="delphi:l_ast:src:Project1:ViewControllerUnit.ViewController.Windows1">
+        <property name="sourceAnchor" value="240,297" />
+        <property name="targetAnchor" value="46,297" />
+        <property name="bendpoints" value="" />
+      </reference>
     </reference>
     <reference referencedUin="delphi:e_class:src:Project1:GeneralInterfaceUnit.GeneralInterface">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="180,400,308,81" />
+      <property name="bounds" value="180,400,269,96" />
       <property name="location_set_by_user" value="True" />
-      <reference referencedUin="delphi:e_method:src:Project1:GeneralInterfaceUnit.GeneralInterface.getOverallAnalyzedRequests()" />
       <reference referencedUin="delphi:e_method:src:Project1:GeneralInterfaceUnit.GeneralInterface.getTotalRequests()" />
+      <reference referencedUin="delphi:e_method:src:Project1:GeneralInterfaceUnit.GeneralInterface.Read()" />
+      <reference referencedUin="delphi:e_method:src:Project1:GeneralInterfaceUnit.GeneralInterface.getAnalyzedRequests()" />
     </reference>
     <reference referencedUin="delphi:e_class:src:Project1:GeneralUnit.General">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="180,560,310,250" />
+      <property name="bounds" value="180,560,269,190" />
       <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:l_impl:src:Project1:GeneralUnit.General:GeneralInterfaceUnit.GeneralInterface">
         <property name="sourceAnchor" value="334,560" />
-        <property name="targetAnchor" value="334,481" />
+        <property name="targetAnchor" value="334,496" />
         <property name="bendpoints" value="" />
       </reference>
-      <reference referencedUin="delphi:e_field:src:Project1:GeneralUnit.General.RegExp" />
-      <reference referencedUin="delphi:e_field:src:Project1:GeneralUnit.General.Log" />
       <reference referencedUin="delphi:e_field:src:Project1:GeneralUnit.General.StartDate" />
       <reference referencedUin="delphi:e_field:src:Project1:GeneralUnit.General.EndDate" />
       <reference referencedUin="delphi:e_field:src:Project1:GeneralUnit.General.LogPath" />
       <reference referencedUin="delphi:e_method:src:Project1:GeneralUnit.General.Read()" />
-      <reference referencedUin="delphi:e_field:src:Project1:GeneralUnit.General.OverallAnalyzedRequests" />
-      <reference referencedUin="delphi:e_method:src:Project1:GeneralUnit.General.getOverallAnalyzedRequests()" />
       <reference referencedUin="delphi:e_method:src:Project1:GeneralUnit.General.Create(System.string,System.TDateTime,System.TDateTime,System.Generics.Collections.TDictionary&lt;System.string&gt;)" />
       <reference referencedUin="design:link:::m3023t1v0mh_l">
-        <property name="sourceAnchor" value="490,615" />
+        <property name="sourceAnchor" value="449,615" />
         <property name="targetAnchor" value="580,615" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:e_method:src:Project1:GeneralUnit.General.getTotalRequests()" />
       <reference referencedUin="delphi:e_field:src:Project1:GeneralUnit.General.reader" />
-      <reference referencedUin="delphi:e_field:src:Project1:GeneralUnit.General.return" />
       <reference referencedUin="delphi:e_method:src:Project1:GeneralUnit.General.Create(System.string,System.TDateTime,System.TDateTime,System.Generics.Collections.TList&lt;ReadInterfaceUnit.ReadInterface&gt;)" />
+      <reference referencedUin="delphi:e_method:src:Project1:GeneralUnit.General.getAnalyzedRequests()" />
     </reference>
     <reference referencedUin="delphi:e_class:src:Project1:TotalRequestsUnit.TotalRequests">
       <property name="$shortcutReference" value="true" />
@@ -186,6 +177,28 @@
       <reference referencedUin="delphi:e_method:src:Project1:ReadInterfaceUnit.ReadInterface.return()" />
       <reference referencedUin="delphi:e_method:src:Project1:ReadInterfaceUnit.ReadInterface.read(System.string)" />
       <reference referencedUin="delphi:e_method:src:Project1:ReadInterfaceUnit.ReadInterface.GetName()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Project1:WindowsInterfaceUnit.WindowsInterface">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="-200,280,246,81" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:Project1:WindowsInterfaceUnit.WindowsInterface.Destroy()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Project1:GeneralWindowsUnit.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="-116,473,0,0" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Project1:GeneralWindowsUnit.GeneralWindows">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="-114,479,237,130" />
+      <reference referencedUin="delphi:l_impl:src:Project1:GeneralWindowsUnit.GeneralWindows:WindowsInterfaceUnit.WindowsInterface">
+        <property name="sourceAnchor" value="-34,479" />
+        <property name="targetAnchor" value="-34,361" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:e_method:src:Project1:GeneralWindowsUnit.GeneralWindows.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:Project1:GeneralWindowsUnit.GeneralWindows.create(Vcl.Forms.TForm)" />
+      <reference referencedUin="delphi:e_field:src:Project1:GeneralWindowsUnit.GeneralWindows.FlowPanel1" />
     </reference>
   </view>
 </nodeSet>

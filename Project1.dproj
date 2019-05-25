@@ -88,7 +88,7 @@
 			</DCCReference>
 			<DCCReference Include="Model\ModelControllerInterfaceUnit.pas"/>
 			<DCCReference Include="Model\ModelControllerUnit.pas"/>
-			<DCCReference Include="View\InvironmentInterfaceUnit.pas"/>
+			<DCCReference Include="view\WindowsInterfaceUnit.pas"/>
 			<DCCReference Include="View\ViewControllerInterfaceUnit.pas"/>
 			<DCCReference Include="View\ViewControllerUnit.pas"/>
 			<DCCReference Include="Model\GeneralInterfaceUnit.pas"/>
@@ -107,6 +107,7 @@
 			<DCCReference Include="Model\UniqueStaticFilesUnit.pas"/>
 			<DCCReference Include="Model\LogSizeUnit.pas"/>
 			<DCCReference Include="Model\BandWidthUnit.pas"/>
+			<DCCReference Include="View\GeneralWindowsUnit.pas"/>
 			<None Include="ModelSupport_Project1\default.txaPackage"/>
 			<None Include="ModelSupport_Project1\default.txvpck"/>
 			<None Include="ModelSupport_Project1\Unit1\default.txvpck"/>
@@ -134,6 +135,11 @@
 			<None Include="ModelSupport_Project1\TotalRequestsUnit\default.txvpck"/>
 			<None Include="ModelSupport_Project1\ReadInterfaceUnit\default.txaPackage"/>
 			<None Include="ModelSupport_Project1\ReadInterfaceUnit\default.txvpck"/>
+			<None Include="ModelSupport_Project1\WindowsInterfaceUnit\default.txaPackage"/>
+			<None Include="ModelSupport_Project1\WindowsInterfaceUnit\default.txvpck"/>
+			<None Include="ModelSupport_Project1\GeneralWindowsUnit\default.txaPackage"/>
+			<None Include="ModelSupport_Project1\GeneralWindowsUnit\default.txvpck"/>
+			<None Include="ModelSupport_Project1\GenerationTimeUnit\default.txvpck"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>

@@ -9,7 +9,7 @@ uses
 type
   GeneralInterface = interface
     procedure Read;
-    function getOverallAnalyzedRequests:  TList<ReadInterface>;
+    function getAnalyzedRequests:  TList<ReadInterface>;
   end;
 
 implementation

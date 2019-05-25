@@ -3,12 +3,13 @@ unit ViewControllerUnit;
 interface
 
 uses
+  GeneralWindowsUnit,
   System.Generics.Collections {TDictionary} ,
   ReadInterfaceUnit,
   SysUtils,
   Vcl.Forms,
   GeneralUnit,
-  InvironmentInterfaceUnit,
+  WindowsInterfaceUnit,
   ViewControllerInterfaceUnit,
   ModelControllerUnit {ModelControllerUnit} ,
   ModelControllerInterfaceUnit {ModelControllerInterface};
@@ -17,7 +18,7 @@ type
   ViewController = Class(TInterfacedObject, ViewControllerInterface)
   private
     /// <link>aggregation</link>
-    Invironment: InvironmentInterface;
+    Windows1: WindowsInterface;
     AOwner: TForm;
     /// <link>aggregation</link>
     ModuleController: ModelControllerInterface;
@@ -38,15 +39,16 @@ begin
   Self.AOwner := AOwner;
   ModuleController := ModelController.create;
 
-  for List in ModuleController.getOverallAnalyzedRequests do
+  Windows1:= GeneralWindows.create(AOwner);
+  for List in ModuleController.getGeneralAnalyzedRequests do
     if List.GetName = 'TotalRequest' then
       AOwner.Caption := IntToStr(List.return);
 end;
 
 procedure ViewController.DestroyInvironment;
 begin
-  if assigned(Invironment) then
-    Invironment.Destroy;
+  if assigned(Windows1) then
+    Windows1.Destroy;
 end;
 
 function ViewController.GetForm: TForm;

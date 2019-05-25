@@ -5,7 +5,7 @@ interface
 uses
   ViewControllerUnit {ViewController} ,
   ViewControllerInterfaceUnit {ViewControllerInterface} ,
-  Vcl.Forms {TForm};
+  Vcl.Forms, System.Classes, Vcl.Controls, Vcl.ExtCtrls {TForm};
 
 type
   TForm1 = class(TForm)

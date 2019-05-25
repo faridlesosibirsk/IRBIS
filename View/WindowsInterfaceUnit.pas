@@ -1,9 +1,9 @@
-unit InvironmentInterfaceUnit;
+unit WindowsInterfaceUnit;
 
 interface
 
 type
-  InvironmentInterface = interface
+  WindowsInterface = interface
     procedure Destroy;
   end;
 

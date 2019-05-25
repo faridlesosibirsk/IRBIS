@@ -8,7 +8,7 @@ uses
 
 type
   ModelControllerInterface = interface
-    function getOverallAnalyzedRequests:  TList<ReadInterface>;
+    function getGeneralAnalyzedRequests:  TList<ReadInterface>;
   end;
 
 implementation
