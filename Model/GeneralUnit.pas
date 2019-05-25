@@ -16,14 +16,14 @@ type
     RegExp: TRegExpr;
     Log: TextFile;
     reader: TList<ReadInterface>;
-    return: TDictionary<string, integer>;
+    return: TList<ReadInterface>;
     StartDate: TDateTime;
     EndDate: TDateTime;
 
     LogPath: string;
 
   public
-    function getOverallAnalyzedRequests: TDictionary<string, integer>;
+    function getOverallAnalyzedRequests: TList<ReadInterface>;
     procedure Read;
 
     constructor Create(LogPath: string; StartDate, EndDate: TDateTime;
@@ -42,15 +42,15 @@ begin
   Self.EndDate := EndDate;
   Self.reader := TList<ReadInterface>.Create;
   Self.reader := reader;
-  Self.return := TDictionary<string, integer>.Create;
+  Self.return := TList<ReadInterface>.Create;
+  Self.return := reader;
 end;
 
-function General.getOverallAnalyzedRequests: TDictionary<string, integer>;
+function General.getOverallAnalyzedRequests: TList<ReadInterface>;
 begin
-  result:= TDictionary<string, integer>.create;
-  result:=return;
+  result := TList<ReadInterface>.Create;
+  result := return;
 end;
-
 
 procedure General.Read;
 var
@@ -66,7 +66,6 @@ begin
     begin
       readln(Log, text);
       value.Read(text);
-      return.Add(value.GetName, value.return);
     end;
   end;
   CloseFile(Log);

@@ -88,9 +88,7 @@
 			</DCCReference>
 			<DCCReference Include="Model\ModelControllerInterfaceUnit.pas"/>
 			<DCCReference Include="Model\ModelControllerUnit.pas"/>
-			<DCCReference Include="View\ButtonsUnit.pas"/>
 			<DCCReference Include="View\InvironmentInterfaceUnit.pas"/>
-			<DCCReference Include="View\PanelsUnit.pas"/>
 			<DCCReference Include="View\ViewControllerInterfaceUnit.pas"/>
 			<DCCReference Include="View\ViewControllerUnit.pas"/>
 			<DCCReference Include="Model\GeneralInterfaceUnit.pas"/>

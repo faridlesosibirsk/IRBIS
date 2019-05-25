@@ -1,28 +1,30 @@
 unit ViewControllerUnit;
-
+
 interface
 
 uses
-  PanelsUnit,
+  System.Generics.Collections {TDictionary} ,
+  ReadInterfaceUnit,
+  SysUtils,
   Vcl.Forms,
-  ButtonsUnit,
+  GeneralUnit,
   InvironmentInterfaceUnit,
   ViewControllerInterfaceUnit,
+  ModelControllerUnit {ModelControllerUnit} ,
   ModelControllerInterfaceUnit {ModelControllerInterface};
+
 type
   ViewController = Class(TInterfacedObject, ViewControllerInterface)
   private
     /// <link>aggregation</link>
     Invironment: InvironmentInterface;
-    AOwner:TForm;
+    AOwner: TForm;
     /// <link>aggregation</link>
     ModuleController: ModelControllerInterface;
     procedure DestroyInvironment;
   public
-    procedure CreateButton;
-    Procedure CreatePanel;
     constructor create(AOwner: TForm);
-    Function GetForm:TForm;
+    Function GetForm: TForm;
   End;
 
 implementation
@@ -30,21 +32,15 @@ implementation
 { ViewController }
 
 constructor ViewController.create(AOwner: TForm);
+var
+  List: ReadInterface;
 begin
-  Self.AOwner:=AOwner;
-  CreateButton;
-end;
+  Self.AOwner := AOwner;
+  ModuleController := ModelController.create;
 
-procedure ViewController.CreateButton;
-begin
-  DestroyInvironment;
-  Invironment := Buttons.create(Self);
-end;
-
-procedure ViewController.CreatePanel;
-begin
-  DestroyInvironment;
-  Invironment := Panels.create(Self);
+  for List in ModuleController.getOverallAnalyzedRequests do
+    if List.GetName = 'TotalRequest' then
+      AOwner.Caption := IntToStr(List.return);
 end;
 
 procedure ViewController.DestroyInvironment;
@@ -55,7 +51,8 @@ end;
 
 function ViewController.GetForm: TForm;
 begin
-  Result:=AOwner;
+  Result := AOwner;
 end;
 
 end.
+

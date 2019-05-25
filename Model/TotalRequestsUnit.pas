@@ -10,6 +10,7 @@ type
   const
     name = 'TotalRequest';
   private
+    count: integer;
   public
     procedure Read(OneLogString: String);
     function return: integer;
@@ -23,7 +24,7 @@ implementation
 
 constructor TotalRequests.create;
 begin
-
+  Self.count := 0;
 end;
 
 function TotalRequests.GetName: string;
@@ -33,12 +34,12 @@ end;
 
 procedure TotalRequests.Read(OneLogString: String);
 begin
-
+  Inc(count);
 end;
 
 function TotalRequests.return: integer;
 begin
-  Result := 0;
+  Result := Self.count;
 end;
 
 end.
