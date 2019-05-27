@@ -15,6 +15,7 @@ uses
   System.Generics.Collections {TDictionary} ,
   ReadInterfaceUnit,
   ValidRequestsUnit,
+  TotalRequestsUnit,
   GeneralUnit {General} ,
   GeneralInterfaceUnit {GeneralInterface} ,
   TestFramework, System.SysUtils, Vcl.Graphics, Winapi.Windows, System.Variants,
@@ -23,50 +24,75 @@ uses
 type
   TestGeneral = class(TTestCase)
   const
-    LogPath = 'access.log';
+    LogPath1 = 'irbislog_copy_01.02.2013.log';
+    LogPath2 = 'access.log';
     StartDate = 43460; // 0 12/30/1899 12:00 am
     EndDate = 43462; // 2.75 1/1/1900 6:00 pm
   strict private
-    FGeneral: General;
+    FGeneral1, FGeneral2: General;
   public
     procedure SetUp; override;
     procedure TearDown; override;
   published
     // procedure TestGetLogPath;
     procedure TestRead;
+    procedure TestCount;
   end;
 
 implementation
 
 procedure TestGeneral.SetUp;
 var
-  reader: TList<readinterface>;
+  reader1, reader2: TList<readinterface>;
 begin
-  reader := TList<readinterface>.create;
-  reader.Add(ValidRequest.create);
-  FGeneral := General.create(LogPath, StartDate, EndDate, reader);
+  reader1 := TList<readinterface>.create;
+  reader1.Add(TotalRequests.create);
+  reader2 := TList<readinterface>.create;
+  reader2.Add(TotalRequests.create);
+  FGeneral1 := General.create(LogPath1, StartDate, EndDate, reader1);
+  FGeneral2 := General.create(LogPath2, StartDate, EndDate, reader2);
 end;
 
 procedure TestGeneral.TearDown;
 begin
-  FGeneral.Free;
-  FGeneral := nil;
+  FGeneral1.Free;
+  FGeneral1 := nil;
+  FGeneral2.Free;
+  FGeneral2 := nil;
+end;
+
+procedure TestGeneral.TestCount;
+var
+  List: ReadInterface;
+  ListReturn: integer;
+  ListGetName: string;
+begin
+  ListReturn := 0;
+  FGeneral1.Read;
+
+  for List in FGeneral1.getAnalyzedRequests do begin
+    ListGetName := List.GetName;
+    if List.GetName = 'TotalRequest' then
+     ListReturn := List.return;
+  CheckEquals(ListReturn, 45799);
+  end;
+  FGeneral2.Read;
+  for List in FGeneral2.getAnalyzedRequests do begin
+    ListGetName := List.GetName;
+    if List.GetName = 'TotalRequest' then
+     ListReturn := List.return;
+  CheckEquals(ListReturn, 1);
+  end;
 end;
 
 procedure TestGeneral.TestRead;
 var
   i: integer;
 begin
-  FGeneral.Read;
-  CheckNotNull(FGeneral);
+  FGeneral1.Read;
+  CheckNotNull(FGeneral1);
 end;
 
-{
-  procedure TestGeneral.TestGetLogPath;
-  begin
-  CheckEqualsString(FGeneral.GetLogPath, LogPath);
-  end;
-}
 initialization
 
 // Register any test cases with the test runner
