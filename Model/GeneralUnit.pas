@@ -48,7 +48,7 @@ end;
 procedure General.Read;
 var
   text: string;
-  key: string;
+  //key: string;
   value: ReadInterface;
   Log: TextFile;
 begin

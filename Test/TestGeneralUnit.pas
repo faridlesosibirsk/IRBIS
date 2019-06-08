@@ -76,6 +76,7 @@ begin
      ListReturn := List.return;
   CheckEquals(ListReturn, 45799);
   end;
+
   FGeneral2.Read;
   for List in FGeneral2.getAnalyzedRequests do begin
     ListGetName := List.GetName;
