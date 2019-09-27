@@ -24,6 +24,7 @@ type
     ModuleController: ModelControllerInterface;
     procedure DestroyInvironment;
   public
+    function getGeneralAnalyzedRequestsTotalRequest: string;
     constructor create(AOwner: TForm);
     Function GetForm: TForm;
   End;
@@ -37,12 +38,12 @@ var
   List: ReadInterface;
 begin
   Self.AOwner := AOwner;
-  ModuleController := ModelController.create;
+  ModuleController := ModelController.create();
 
   Windows1:= GeneralWindows.create(AOwner);
-  for List in ModuleController.getGeneralAnalyzedRequests do
+  {for List in ModuleController.getGeneralAnalyzedRequests do
     if List.GetName = 'TotalRequest' then
-      AOwner.Caption := IntToStr(List.return);
+      AOwner.Caption := IntToStr(List.return);   }
 end;
 
 procedure ViewController.DestroyInvironment;
@@ -54,6 +55,16 @@ end;
 function ViewController.GetForm: TForm;
 begin
   Result := AOwner;
+end;
+
+function ViewController.getGeneralAnalyzedRequestsTotalRequest: string;
+var
+  List: ReadInterface;
+begin
+  Result := '';
+  for List in ModuleController.getGeneralAnalyzedRequests do
+    if List.GetName = 'TotalRequest' then
+      Result := IntToStr(List.return);
 end;
 
 end.

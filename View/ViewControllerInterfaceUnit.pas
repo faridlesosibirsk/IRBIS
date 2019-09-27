@@ -8,6 +8,7 @@ Uses
 type
   ViewControllerInterface = interface
     Function GetForm:TForm;
+    function getGeneralAnalyzedRequestsTotalRequest: string;
   end;
 
 implementation
